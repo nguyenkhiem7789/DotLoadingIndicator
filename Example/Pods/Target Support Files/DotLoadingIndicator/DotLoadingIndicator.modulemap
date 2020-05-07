@@ -1,0 +1,6 @@
+framework module DotLoadingIndicator {
+  umbrella header "DotLoadingIndicator-umbrella.h"
+
+  export *
+  module * { export * }
+}

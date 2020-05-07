@@ -1,0 +1,27 @@
+PODS:
+  - DotLoadingIndicator (0.1.0)
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+
+DEPENDENCIES:
+  - DotLoadingIndicator (from `../`)
+  - FBSnapshotTestCase (~> 2.1.4)
+
+SPEC REPOS:
+  trunk:
+    - FBSnapshotTestCase
+
+EXTERNAL SOURCES:
+  DotLoadingIndicator:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  DotLoadingIndicator: 3d3e972a99aa6271d49ccd280bc36166f4de298c
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+
+PODFILE CHECKSUM: dabb9853649669b98bd72c792d40e41247002bf6
+
+COCOAPODS: 1.9.1

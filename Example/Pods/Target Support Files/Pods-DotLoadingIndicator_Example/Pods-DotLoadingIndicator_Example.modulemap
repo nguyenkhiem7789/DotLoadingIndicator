@@ -1,0 +1,6 @@
+framework module Pods_DotLoadingIndicator_Example {
+  umbrella header "Pods-DotLoadingIndicator_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
