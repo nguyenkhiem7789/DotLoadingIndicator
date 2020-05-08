@@ -26,7 +26,8 @@ pod 'DotLoadingIndicator'
 
 ## How to use?
 
-In storyboard, you need create a CircularProgressView
+In storyboard, you need create a DotLoadingView
+
 <img src="https://user-images.githubusercontent.com/18132015/81379459-5bef7200-9133-11ea-84a9-14489301d54a.png"/>
 
 And in swift code, you cant set value for circle progress:
