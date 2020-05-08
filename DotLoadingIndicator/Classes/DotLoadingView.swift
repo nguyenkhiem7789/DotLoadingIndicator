@@ -22,6 +22,10 @@ class DotLoadingView: UIView {
 
     private var number: Int = 3
 
+    private var foreColor: CGColor = UIColor.darkGray.cgColor
+
+    private let textLayer = CATextLayer()
+
     @IBInspectable
     public var circleRadius: CGFloat = 0.0 {
         didSet {
@@ -40,6 +44,7 @@ class DotLoadingView: UIView {
     public var textMessage: String = "" {
         didSet {
             self.text = textMessage
+            self.changeTextMessage(text: textMessage)
         }
     }
 
@@ -49,6 +54,14 @@ class DotLoadingView: UIView {
             self.number = numberDot
             self.removeDots()
             self.initDotView()
+        }
+    }
+
+    @IBInspectable
+    public var dotColor: CGColor = UIColor.darkGray.cgColor {
+        didSet {
+            self.foreColor = dotColor
+            self.changeColorDots(color: dotColor)
         }
     }
 
@@ -73,10 +86,16 @@ class DotLoadingView: UIView {
             layer.anchorPoint = centerPoint
             layer.contentsGravity = "center"
             layer.path = circlePath.cgPath
-            layer.fillColor = UIColor.red.cgColor
+            layer.fillColor = foreColor
             dot.layer = layer
             dots.append(dot)
             self.layer.addSublayer(layer)
+        }
+    }
+
+    private func changeColorDots(color: CGColor) {
+        for(_, dot) in dots.enumerated() {
+            dot.layer?.fillColor = color
         }
     }
 
@@ -89,7 +108,6 @@ class DotLoadingView: UIView {
 
     private func initText() {
         let centerY = self.frame.size.height / 2
-        let textLayer = CATextLayer()
         textLayer.frame = CGRect(x: 0, y: centerY + radius + 16, width: self.frame.size.width, height: 20)
         textLayer.rasterizationScale = UIScreen.main.scale
         textLayer.contentsScale = UIScreen.main.scale
@@ -98,6 +116,10 @@ class DotLoadingView: UIView {
         textLayer.alignmentMode = "center"
         textLayer.string = text
         self.layer.addSublayer(textLayer)
+    }
+
+    private func changeTextMessage(text: String) {
+        textLayer.string = text
     }
 
     override func layoutSubviews() {

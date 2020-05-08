@@ -27,6 +27,37 @@ public class LoadingView: UIView {
 
     public var heightHeaderView: CGFloat = 40.0
 
+    public var circleRadius: CGFloat = 0.0 {
+        didSet {
+            self.dotLoadingView.circleRadius = circleRadius
+        }
+    }
+
+    public var circleOffset: CGFloat = 0.0 {
+        didSet {
+            self.dotLoadingView.circleOffset = circleOffset
+        }
+    }
+
+    public var textMessage: String = "" {
+        didSet {
+            print("XXXtextMessage 1 = \(textMessage)")
+            self.dotLoadingView.textMessage = textMessage
+        }
+    }
+
+    public var numberDot: Int = 0 {
+        didSet {
+            self.dotLoadingView.numberDot = numberDot
+        }
+    }
+
+    public var dotColor: CGColor = UIColor.darkGray.cgColor {
+        didSet {
+            self.dotLoadingView.dotColor = dotColor
+        }
+    }
+
     var containerView: UIView!
 
     override init(frame: CGRect) {
