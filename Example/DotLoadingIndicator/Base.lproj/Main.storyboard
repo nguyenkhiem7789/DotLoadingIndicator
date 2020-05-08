@@ -31,7 +31,7 @@
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="circleOffset">
-                                        <real key="value" value="10"/>
+                                        <real key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="numberDot">
                                         <integer key="value" value="3"/>

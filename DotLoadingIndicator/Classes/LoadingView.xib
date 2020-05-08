@@ -30,6 +30,11 @@
                         <constraint firstAttribute="height" constant="200" id="05G-1D-r5x"/>
                         <constraint firstAttribute="width" constant="200" id="oH6-H0-sGv"/>
                     </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="circleOffset">
+                            <real key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

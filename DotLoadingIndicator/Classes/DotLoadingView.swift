@@ -14,7 +14,7 @@ class DotLoadingView: UIView {
 
     private var radius: CGFloat = 10.0
 
-    private var offset: CGFloat = 10.0    
+    private var offset: CGFloat = 2.0
 
     private var dots: [Dot] = []
 
