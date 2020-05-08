@@ -33,19 +33,67 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="circleOffset">
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="numberDot">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="vdQ-Wv-sBw">
+                                <rect key="frame" x="36" y="607" width="303" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQx-un-Rzp">
+                                        <rect key="frame" x="0.0" y="0.0" width="141.5" height="40"/>
+                                        <state key="normal" title="Full Screen"/>
+                                        <connections>
+                                            <action selector="clickShowFullScreenButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="LOm-5M-80B"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pv5-w2-aB6">
+                                        <rect key="frame" x="161.5" y="0.0" width="141.5" height="40"/>
+                                        <state key="normal" title="Not Full Screen"/>
+                                        <connections>
+                                            <action selector="clickShowNotFullScreenButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="xFq-R4-rnW"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="6JM-5A-Ua1"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2I2-0X-hh5">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Main Screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="61h-zt-gMa">
+                                        <rect key="frame" x="140" y="10" width="95" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="61h-zt-gMa" firstAttribute="centerX" secondItem="2I2-0X-hh5" secondAttribute="centerX" id="U6R-Pp-408"/>
+                                    <constraint firstItem="61h-zt-gMa" firstAttribute="centerY" secondItem="2I2-0X-hh5" secondAttribute="centerY" id="Zx3-OI-D0a"/>
+                                    <constraint firstAttribute="height" constant="40" id="iTy-Yr-h5y"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="hiy-1r-YVF" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="1It-cK-ZpV"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="vdQ-Wv-sBw" secondAttribute="bottom" constant="20" id="4LI-t1-K8U"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vdQ-Wv-sBw" secondAttribute="trailing" constant="20" id="4nY-Wg-oMZ"/>
+                            <constraint firstAttribute="trailing" secondItem="2I2-0X-hh5" secondAttribute="trailing" id="JlP-cx-H9M"/>
+                            <constraint firstItem="vdQ-Wv-sBw" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="XzN-ry-bML"/>
+                            <constraint firstItem="2I2-0X-hh5" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="ge7-Xp-23y"/>
+                            <constraint firstItem="2I2-0X-hh5" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="ts6-e7-f30"/>
                             <constraint firstItem="hiy-1r-YVF" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="v99-WF-g5f"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="128"/>
+            <point key="canvasLocation" x="140" y="127.28635682158921"/>
         </scene>
     </scenes>
 </document>

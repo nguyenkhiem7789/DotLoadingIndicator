@@ -13,6 +13,8 @@
 		129E7EE685BAACFB5EFF82480CB9D2E5 /* Pods-DotLoadingIndicator_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 72A31BFF6F410E7931236BBD627DB340 /* Pods-DotLoadingIndicator_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		14AD81D52FAD9CF2C065C61FB00C3B4F /* UIImage+Diff.m in Sources */ = {isa = PBXBuildFile; fileRef = 4568279DE47DC3AB91598E1317503995 /* UIImage+Diff.m */; };
 		14C511527597E5846AB2627F791C7D8E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 716A9972B9D9103B54DB950893FAF104 /* QuartzCore.framework */; };
+		187FF1DB246509020064F961 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187FF1DA246509020064F961 /* LoadingView.swift */; };
+		187FF1DF246510DB0064F961 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 187FF1DE246510DB0064F961 /* LoadingView.xib */; };
 		189BD50B2463FC7E00FAC24D /* DotLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189BD50A2463FC7E00FAC24D /* DotLoadingView.swift */; };
 		189BD50F246466F200FAC24D /* Dot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189BD50E246466F200FAC24D /* Dot.swift */; };
 		2DCFF0CE0BD295F1D46D3247F36B192C /* UIImage+Compare.m in Sources */ = {isa = PBXBuildFile; fileRef = 235A78CFFA6D8B8D86CACD733531CB13 /* UIImage+Compare.m */; };
@@ -39,7 +41,6 @@
 		F1AAAE00BB32B733B238E2B4E8424506 /* UIImage+Compare.h in Headers */ = {isa = PBXBuildFile; fileRef = 656116C8FA5458F45D4707110C9530EC /* UIImage+Compare.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		F340D27F0D1CC20A74D752DA71E9E7A4 /* Pods-DotLoadingIndicator_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A051014BF83D1E695910C25F8827FFAB /* Pods-DotLoadingIndicator_Example-dummy.m */; };
 		F720FAF13A108CE6901E0A8B0580E1E8 /* FBSnapshotTestCase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E5923010B02074CAA9AAF6EA02D66AA /* FBSnapshotTestCase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FCEFA8D4D43533B7641297D45E1B2484 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72971ED9C8776DC9F62A7E3E0F09596C /* ReplaceMe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,8 @@
 		0A336DF2051F494D28670843E1904BC1 /* Pods-DotLoadingIndicator_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DotLoadingIndicator_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		0F538C426803AE34255FC6E35B408CCA /* UIApplication+StrictKeyWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+StrictKeyWindow.m"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.m"; sourceTree = "<group>"; };
 		139D01743540F21BA6DD8B3A440F9209 /* DotLoadingIndicator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DotLoadingIndicator.release.xcconfig; sourceTree = "<group>"; };
+		187FF1DA246509020064F961 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoadingView.swift; path = DotLoadingIndicator/Classes/LoadingView.swift; sourceTree = "<group>"; };
+		187FF1DE246510DB0064F961 /* LoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoadingView.xib; path = DotLoadingIndicator/Classes/LoadingView.xib; sourceTree = "<group>"; };
 		189BD50A2463FC7E00FAC24D /* DotLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DotLoadingView.swift; path = DotLoadingIndicator/Classes/DotLoadingView.swift; sourceTree = "<group>"; };
 		189BD50E246466F200FAC24D /* Dot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Dot.swift; path = DotLoadingIndicator/Classes/Dot.swift; sourceTree = "<group>"; };
 		18A2D4154A9F660E723216C95DA5B53F /* Pods-DotLoadingIndicator_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DotLoadingIndicator_Tests-umbrella.h"; sourceTree = "<group>"; };
@@ -96,7 +99,6 @@
 		6ABB3EB3CCC5BCA82F40FE8DC87BB778 /* FBSnapshotTestCasePlatform.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCasePlatform.m; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.m; sourceTree = "<group>"; };
 		7168D9C9C449BA2C37480795C073D782 /* DotLoadingIndicator-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "DotLoadingIndicator-Info.plist"; sourceTree = "<group>"; };
 		716A9972B9D9103B54DB950893FAF104 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		72971ED9C8776DC9F62A7E3E0F09596C /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = DotLoadingIndicator/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
 		72A31BFF6F410E7931236BBD627DB340 /* Pods-DotLoadingIndicator_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DotLoadingIndicator_Example-umbrella.h"; sourceTree = "<group>"; };
 		756F42ACCBE847DE62EC66CDBA69AF5B /* Pods-DotLoadingIndicator_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DotLoadingIndicator_Example-frameworks.sh"; sourceTree = "<group>"; };
 		76CAB6A162F4329E09CE592801DD62F3 /* DotLoadingIndicator-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DotLoadingIndicator-dummy.m"; sourceTree = "<group>"; };
@@ -222,9 +224,10 @@
 		39794679AD93946DFC361B7F4C13218D /* DotLoadingIndicator */ = {
 			isa = PBXGroup;
 			children = (
+				187FF1DE246510DB0064F961 /* LoadingView.xib */,
+				187FF1DA246509020064F961 /* LoadingView.swift */,
 				189BD50E246466F200FAC24D /* Dot.swift */,
 				189BD50A2463FC7E00FAC24D /* DotLoadingView.swift */,
-				72971ED9C8776DC9F62A7E3E0F09596C /* ReplaceMe.swift */,
 				7612A7B5A8412A007312D5CDF54A1E02 /* Pod */,
 				09BAA24894369157083D715C4BB1CDF4 /* Support Files */,
 			);
@@ -518,6 +521,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				187FF1DF246510DB0064F961 /* LoadingView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -550,8 +554,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				189BD50B2463FC7E00FAC24D /* DotLoadingView.swift in Sources */,
+				187FF1DB246509020064F961 /* LoadingView.swift in Sources */,
 				9FE6F722BCA0D2D5D0265D3CE74B1BB9 /* DotLoadingIndicator-dummy.m in Sources */,
-				FCEFA8D4D43533B7641297D45E1B2484 /* ReplaceMe.swift in Sources */,
 				189BD50F246466F200FAC24D /* Dot.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

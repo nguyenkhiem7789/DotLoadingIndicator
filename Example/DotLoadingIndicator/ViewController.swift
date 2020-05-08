@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DotLoadingIndicator
 
 class ViewController: UIViewController {
 
@@ -15,10 +16,14 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func clickShowFullScreenButton(_ sender: Any) {
+        LoadingView.shared.show()
     }
+
+    @IBAction func clickShowNotFullScreenButton(_ sender: Any) {
+        LoadingView.shared.show(type: .notFullScreen)
+    }
+
 
 }
 

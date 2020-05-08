@@ -14,13 +14,13 @@ class DotLoadingView: UIView {
 
     private var radius: CGFloat = 10.0
 
-    private var offset: CGFloat = 10.0
-
-    private let timeDelay: Double = 0.4
-
-    private var animDuration: TimeInterval = 0.7
+    private var offset: CGFloat = 10.0    
 
     private var dots: [Dot] = []
+
+    private var text: String = "Loading..."
+
+    private var number: Int = 3
 
     @IBInspectable
     public var circleRadius: CGFloat = 0.0 {
@@ -36,6 +36,22 @@ class DotLoadingView: UIView {
         }
     }
 
+    @IBInspectable
+    public var textMessage: String = "" {
+        didSet {
+            self.text = textMessage
+        }
+    }
+
+    @IBInspectable
+    public var numberDot: Int = 0 {
+        didSet {
+            self.number = numberDot
+            self.removeDots()
+            self.initDotView()
+        }
+    }
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         initDotView()
@@ -47,7 +63,8 @@ class DotLoadingView: UIView {
     }
 
     private func initDotView() {
-        for _ in 0 ..< 3 {
+        self.initText()
+        for _ in 0 ..< number {
             var dot = Dot()
             let layer = CAShapeLayer()
             layer.frame = CGRect(origin: .zero, size: CGSize(width: radius * 2.0, height: radius * 2.0))
@@ -63,29 +80,42 @@ class DotLoadingView: UIView {
         }
     }
 
+    private func removeDots() {
+        for(_, dot) in dots.enumerated() {
+            dot.layer?.removeFromSuperlayer()
+        }
+        dots.removeAll()
+    }
+
+    private func initText() {
+        let centerY = self.frame.size.height / 2
+        let textLayer = CATextLayer()
+        textLayer.frame = CGRect(x: 0, y: centerY + radius + 16, width: self.frame.size.width, height: 20)
+        textLayer.rasterizationScale = UIScreen.main.scale
+        textLayer.contentsScale = UIScreen.main.scale
+        textLayer.fontSize = 14
+        textLayer.foregroundColor = UIColor.black.cgColor
+        textLayer.alignmentMode = "center"
+        textLayer.string = text
+        self.layer.addSublayer(textLayer)
+    }
+
     override func layoutSubviews() {
         super.layoutSubviews()
-        print("XCustom => layoutSubviews")
         let centerX = self.frame.size.width / 2
         let centerY = self.frame.size.height / 2
-        let distance = 2 * radius + offset
-        let firstDotX = centerX - distance
+        let distance = 2 * radius + offset        
+        let firstDotX = centerX - CGFloat((CGFloat(number) - 1)/2) * distance
         for(index, dot) in dots.enumerated() {
             dot.layer?.position = CGPoint(x: firstDotX + CGFloat(index) * distance, y: centerY)
-            dot.layer?.add(scaleAnim(index: index), forKey: "scale")
+            dot.addAnim(index: index)
         }
     }
 
-    ///scale  animation
-    func scaleAnim(index: Int) -> CABasicAnimation {
-        let scaleAnim = CABasicAnimation(keyPath: "transform.scale.xy")
-        scaleAnim.fromValue = 1.0
-        scaleAnim.toValue = 0.1
-        scaleAnim.repeatCount = .infinity
-        scaleAnim.autoreverses = true
-        scaleAnim.duration = animDuration
-        scaleAnim.beginTime = Double(index) * timeDelay
-        return scaleAnim
+    func startAnim() {
+        for(index, dot) in dots.enumerated() {            
+            dot.addAnim(index: index)
+        }
     }
 
 }

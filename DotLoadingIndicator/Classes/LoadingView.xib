@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15505"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoadingView" customModule="DotLoadingIndicator" customModuleProvider="target">
+            <connections>
+                <outlet property="backgroundView" destination="5Qh-2t-rZg" id="Q7b-bJ-qYC"/>
+                <outlet property="dotLoadingView" destination="bVw-l8-jjA" id="aEd-yX-aqj"/>
+                <outlet property="topViewConstraint" destination="4I1-Ml-XGU" id="k7T-vi-hpX"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Qh-2t-rZg">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bVw-l8-jjA" customClass="DotLoadingView" customModule="DotLoadingIndicator" customModuleProvider="target">
+                    <rect key="frame" x="107" y="348" width="200" height="200"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="05G-1D-r5x"/>
+                        <constraint firstAttribute="width" constant="200" id="oH6-H0-sGv"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="5Qh-2t-rZg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="4I1-Ml-XGU"/>
+                <constraint firstItem="bVw-l8-jjA" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="FhO-WK-sBr"/>
+                <constraint firstItem="bVw-l8-jjA" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Gki-TO-CNU"/>
+                <constraint firstItem="5Qh-2t-rZg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="IXb-QX-1Ul"/>
+                <constraint firstItem="5Qh-2t-rZg" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="vIg-6k-vgX"/>
+                <constraint firstAttribute="bottom" secondItem="5Qh-2t-rZg" secondAttribute="bottom" id="z6B-Oe-6jk"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="112.5"/>
+        </view>
+    </objects>
+</document>
