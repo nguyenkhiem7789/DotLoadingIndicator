@@ -40,8 +40,7 @@ public class LoadingView: UIView {
     }
 
     public var textMessage: String = "" {
-        didSet {
-            print("XXXtextMessage 1 = \(textMessage)")
+        didSet {            
             self.dotLoadingView.textMessage = textMessage
         }
     }
