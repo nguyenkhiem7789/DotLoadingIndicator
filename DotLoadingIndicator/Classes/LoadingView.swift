@@ -23,7 +23,7 @@ public class LoadingView: UIView {
 
     @IBOutlet weak var dotLoadingView: DotLoadingView!
 
-    public var timeout: Double = 3.0
+    public var timeout: Double = 15.0
 
     public var heightHeaderView: CGFloat = 40.0
 
