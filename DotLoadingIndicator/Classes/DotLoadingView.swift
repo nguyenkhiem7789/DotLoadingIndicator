@@ -108,13 +108,15 @@ class DotLoadingView: UIView {
 
     private func initText() {
         let centerY = self.frame.size.height / 2
-        textLayer.frame = CGRect(x: 0, y: centerY + radius + 16, width: self.frame.size.width, height: 20)
+        textLayer.frame = CGRect(x: 0, y: centerY + radius + 16, width: self.frame.size.width - 20, height: 60)
         textLayer.rasterizationScale = UIScreen.main.scale
         textLayer.contentsScale = UIScreen.main.scale
+        textLayer.isWrapped = true
         textLayer.fontSize = 14
         textLayer.foregroundColor = UIColor.black.cgColor
         textLayer.alignmentMode = "center"
         textLayer.string = text
+        textLayer.masksToBounds = true
         self.layer.addSublayer(textLayer)
     }
 

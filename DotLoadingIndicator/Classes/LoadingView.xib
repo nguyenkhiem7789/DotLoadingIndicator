@@ -24,11 +24,10 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bVw-l8-jjA" customClass="DotLoadingView" customModule="DotLoadingIndicator" customModuleProvider="target">
-                    <rect key="frame" x="107" y="348" width="200" height="200"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <rect key="frame" x="50" y="291" width="314" height="314"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="200" id="05G-1D-r5x"/>
-                        <constraint firstAttribute="width" constant="200" id="oH6-H0-sGv"/>
+                        <constraint firstAttribute="width" secondItem="bVw-l8-jjA" secondAttribute="height" multiplier="1:1" id="Byb-p0-p00"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="circleOffset">
@@ -43,6 +42,8 @@
                 <constraint firstItem="bVw-l8-jjA" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="FhO-WK-sBr"/>
                 <constraint firstItem="bVw-l8-jjA" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Gki-TO-CNU"/>
                 <constraint firstItem="5Qh-2t-rZg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="IXb-QX-1Ul"/>
+                <constraint firstItem="bVw-l8-jjA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="50" id="eNs-QB-DmB"/>
+                <constraint firstAttribute="trailing" secondItem="bVw-l8-jjA" secondAttribute="trailing" constant="50" id="kZ5-Ti-1Rf"/>
                 <constraint firstItem="5Qh-2t-rZg" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="vIg-6k-vgX"/>
                 <constraint firstAttribute="bottom" secondItem="5Qh-2t-rZg" secondAttribute="bottom" id="z6B-Oe-6jk"/>
             </constraints>
