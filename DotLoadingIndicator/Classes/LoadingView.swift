@@ -23,7 +23,7 @@ public class LoadingView: UIView {
 
     @IBOutlet weak var dotLoadingView: DotLoadingView!
 
-    public var timeout: Double = 15.0
+    public var timeout: Double = 0.0
 
     public var heightHeaderView: CGFloat = 40.0
 
@@ -99,9 +99,11 @@ public class LoadingView: UIView {
             guard let self = self else { return }
             self.containerView?.alpha = 1.0
             window.addSubview((self.containerView)!)
-            DispatchQueue.main.asyncAfter(deadline: .now() + self.timeout) {
-                [unowned self] in
-                self.dimiss()
+            if self.timeout > 0 {
+                DispatchQueue.main.asyncAfter(deadline: .now() + self.timeout) {
+                    [unowned self] in
+                    self.dimiss()
+                }
             }
         }
     }

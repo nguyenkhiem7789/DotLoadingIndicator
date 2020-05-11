@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func clickShowFullScreenButton(_ sender: Any) {
+        LoadingView.shared.timeout = 3
         LoadingView.shared.textMessage = "Xin vui lòng chờ dợi orange ..."
         LoadingView.shared.dotColor = UIColor.orange.cgColor
         LoadingView.shared.show()
